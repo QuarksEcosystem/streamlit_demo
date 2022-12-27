@@ -1,0 +1,5 @@
+# requirements.txt
+snowflake-connector-python==2.7.7
+matplotlib==3.5.2
+geopandas==0.10.2
+altair==4.2.0

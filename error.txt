@@ -1,0 +1,20 @@
+File "/home/appuser/venv/lib/python3.9/site-packages/streamlit/scriptrunner/script_runner.py", line 475, in _run_script
+    exec(code, module.__dict__)
+File "/app/streamlit/WeatherTrafficEvents_app.py", line 58, in <module>
+    total_events_by_day = run_query("SELECT day, sum(traffic_events) as traffic_events, sum(weather_events) as weather_events from US_WEATHER_AND_TRAFFIC_EVENTS.ANALYTICS.DAILY_EVENTS_BY_CITY where day < '"+ end +"' and day > '"+ start +"' group by day order by day ;")
+File "/home/appuser/venv/lib/python3.9/site-packages/streamlit/caching/cache_utils.py", line 145, in wrapper
+    return get_or_create_cached_value()
+File "/home/appuser/venv/lib/python3.9/site-packages/streamlit/caching/cache_utils.py", line 137, in get_or_create_cached_value
+    return_value = func(*args, **kwargs)
+File "/app/streamlit/WeatherTrafficEvents_app.py", line 30, in run_query
+    cur.execute(query)
+File "/home/appuser/venv/lib/python3.9/site-packages/snowflake/connector/cursor.py", line 706, in execute
+    ret = self._execute_helper(query, **kwargs)
+File "/home/appuser/venv/lib/python3.9/site-packages/snowflake/connector/cursor.py", line 505, in _execute_helper
+    ret = self._connection.cmd_query(
+File "/home/appuser/venv/lib/python3.9/site-packages/snowflake/connector/connection.py", line 951, in cmd_query
+    ret = self.rest.request(
+File "/home/appuser/venv/lib/python3.9/site-packages/snowflake/connector/network.py", line 466, in request
+    return self._post_request(
+File "/home/appuser/venv/lib/python3.9/site-packages/snowflake/connector/network.py", line 727, in _post_request
+    raise ex.cause
