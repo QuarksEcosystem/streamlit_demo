@@ -126,7 +126,7 @@ with col1:
     x_dt = [ datetime.datetime.combine(my_day, t) for t in hour_clean ]
 
     #limite do eixo y de 0 a 4
-    plt.ylim([0, 4])
+    #plt.ylim([0, 4])
 
     ax.plot(x_dt, average_clean, label = "Clima bom")
 
@@ -142,7 +142,7 @@ with col1:
 
     my_day = datetime.date(2020, 1, 1)
     x_dt = [ datetime.datetime.combine(my_day, t) for t in hour_bad_weather ]
-    plt.ylim([0, 4])
+    #plt.ylim([0, 4])
     ax.plot(x_dt, average_bad_weather, label = "Clima ruim")
 
     ax.legend()
